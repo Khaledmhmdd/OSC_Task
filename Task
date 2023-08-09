@@ -1,0 +1,45 @@
+osc@pop-os:~$ 
+osc@pop-os:~$ mkdir KhaledMohamed
+osc@pop-os:~$ cd KhaledMohamed/
+osc@pop-os:~/KhaledMohamed$ mkdir Documents
+osc@pop-os:~/KhaledMohamed$ cd Documents/
+osc@pop-os:~/KhaledMohamed/Documents$ touch file1.txt file2.txt file3.txt
+osc@pop-os:~/KhaledMohamed/Documents$ ls
+file1.txt  file2.txt  file3.txt
+osc@pop-os:~/KhaledMohamed/Documents$ cd ..
+osc@pop-os:~/KhaledMohamed$ touch ".hidden_file"
+osc@pop-os:~/KhaledMohamed$ ls -a
+.  ..  Documents  .hidden_file
+osc@pop-os:~/KhaledMohamed$ nano ~ Documents/file1.txt 
+osc@pop-os:~/KhaledMohamed$ cat Documents/file1.txt 
+file1.txtttt
+
+osc@pop-os:~/KhaledMohamed$ cd Documents/
+osc@pop-os:~/KhaledMohamed/Documents$ mkdir "-"
+osc@pop-os:~/KhaledMohamed/Documents$ ls
+-  file1.txt  file2.txt  file3.txt
+osc@pop-os:~/KhaledMohamed/Documents$ cd ./-/
+osc@pop-os:~/KhaledMohamed/Documents/-$ cp -r ~/KhaledMohamed/Documents/ ~/KhaledMohamed/Mydocuments
+osc@pop-os:~/KhaledMohamed/Documents/-$ cd ..
+osc@pop-os:~/KhaledMohamed/Documents$ cd ..
+osc@pop-os:~/KhaledMohamed$ ls 
+Documents  Mydocuments
+osc@pop-os:~/KhaledMohamed$ cd Mydocuments/
+osc@pop-os:~/KhaledMohamed/Mydocuments$ ls 
+-  file1.txt  file2.txt  file3.txt
+osc@pop-os:~/KhaledMohamed/Mydocuments$ cd ..
+osc@pop-os:~/KhaledMohamed$ cat .hidden_file 
+osc@pop-os:~/KhaledMohamed$ echo hiddenfiletext >.hidden_file 
+osc@pop-os:~/KhaledMohamed$ cat .hidden_file 
+hiddenfiletext
+osc@pop-os:~/KhaledMohamed$ mv ~/KhaledMohamed/Documents/file2.txt ~/KhaledMohamed/
+osc@pop-os:~/KhaledMohamed$ mv ~/KhaledMohamed/Documents/file3.txt ~/KhaledMohamed/
+osc@pop-os:~/KhaledMohamed$ ls
+Documents  file2.txt  file3.txt  Mydocuments
+osc@pop-os:~/KhaledMohamed$ cd ~
+osc@pop-os:~$ rm -r KhaledMohamed/
+osc@pop-os:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Task  Templates  Videos
+osc@pop-os:~$ 
+
+
